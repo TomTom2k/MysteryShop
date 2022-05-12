@@ -1,0 +1,130 @@
+.navbar {
+  padding: 2rem 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--bg-100);
+  box-shadow: 0 0 0.8rem rgba(0,0,0,0.2);
+  position: relative;
+  z-index: 1000;
+}
+
+.navbar .menu {
+  width: 70%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.navbar .menu li {
+  font-size: 1.8rem;
+  padding: 1rem 0;
+}
+
+.navbar .menu li a {
+  color: var(--text-900);
+  font-weight: 500;
+}
+
+.navbar .menu li:hover {
+  transform: translateY(-0.2rem) scale(1.1);
+}
+
+.navbar .menu li a:hover {
+  color: var(--main-color);
+  font-weight: 600;
+}
+
+.navbar .icons {
+  width: 15%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.navbar .icons svg {
+  width: 4rem;
+  height: 4rem;
+  padding: 0.5rem;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.navbar .icons svg:hover {
+  background: var(--main-color);
+  border-radius: 50%;
+  color: var(--bg-50);
+}
+
+#bars {
+  display: none;
+}
+
+#menu .search-box {
+  display: none;
+  margin-bottom: 3rem;
+}
+
+#menu .search-box input {
+  width: 100%;
+  outline: none;
+  padding: 0.2rem 1rem;
+  border: 0.2rem solid var(--main-color);
+  border-radius: 1rem;
+
+
+}
+
+#search ~ input {
+  position: absolute;
+  right: 0;
+  top: 9rem;
+  width: 30rem;
+  outline: none;
+  padding: 0.2rem 1rem;
+  border-radius: 1rem;
+  border: 0.2rem solid var(--main-color);
+  box-shadow: 0 0 0.4rem rgba(0,0,0,0.2);
+}
+
+
+
+
+@media (max-width: 992px) {
+  .navbar {
+    padding: 2rem;
+  }
+}
+@media (max-width: 768px) {
+  .navbar .menu {
+    display: none;
+  }
+  #search {
+    display: none;
+  }
+  #bars {
+    display: block;
+  }
+  #menu {
+    position: absolute;
+
+  }
+  #menu.active {
+    display: block;
+    height: calc(100vh - 9rem);
+    width: 30rem;
+    padding: 4rem;
+    top: 9rem;
+    right: 0;
+    background: var(--bg-50);
+    box-shadow: 0 0 0.8rem rgba(0,0,0,0.2);
+  }
+  #menu .search-box {
+    display: block;
+  }
+  #search ~ input {
+    display: none;
+  }
+}
+@media (max-width: 600px) {
+  
+}
