@@ -1,12 +1,14 @@
 import React from 'react'
 import Intro from '../../components/HomeComponents/Intro/Intro'
-import ListProdct from '../../components/HomeComponents/ListProduct/ListProdct'
+import ListProduct from '../../components/HomeComponents/ListProduct/ListProduct'
+
+import './Home.css'
 
 const Home = () => {
   return (
-    <div>
+    <div className="home">
       <Intro/>
-      <ListProdct/>
+      <ListProduct/>
     </div>
   )
 }
