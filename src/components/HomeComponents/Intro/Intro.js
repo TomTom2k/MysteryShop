@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { useEffect } from 'react'
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
@@ -8,10 +9,18 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 
 
-import events from '../../../data/event.json'
+import Events from '../../../data/event.json'
 import './Intro.css'
 
 const Intro = () => {
+    const [events, setEvents] = useState(Events)
+      
+    useEffect(() => {
+      fetch('http://localhost:3000/event')
+        .then((res) => res.json())
+        .then(json => setEvents(json))
+    },[])
+
   return (
     <div>
       

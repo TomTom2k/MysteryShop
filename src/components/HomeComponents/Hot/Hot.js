@@ -1,5 +1,6 @@
 import React from 'react'
 import hots from '../../../data/hots.json'
+import Title from '../../Title/Title'
 
 import './Hot.css'
 
@@ -7,7 +8,7 @@ import './Hot.css'
 const Hot = () => {
   return (
     <div className="list-hot">
-      <div className="title">Sản phẩm nổi bật</div>
+      <Title text="Sản phẩm nổi bật" />
       <div className="hot">
         {
           hots.map((hot) => (

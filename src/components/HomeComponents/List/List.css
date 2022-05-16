@@ -1,0 +1,41 @@
+.list {
+  margin: 4rem 0 25rem;
+
+}
+.catelogy {
+  padding: 4rem;
+  display: flex;
+  justify-content: space-evenly
+}
+
+.catelogy .l-item {
+  width: 20rem;
+  border-radius: 2rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.catelogy .l-item img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.catelogy .l-item p {
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.2);
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: var(--bg-50);
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translatey(-100rem);
+  cursor: pointer;
+}
+
+.catelogy .l-item:hover p {
+  transform: translateX(0);
+}

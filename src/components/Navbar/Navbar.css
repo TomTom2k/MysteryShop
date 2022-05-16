@@ -30,12 +30,14 @@
 }
 
 .navbar .menu li:hover {
-  transform: translateY(-0.2rem) scale(1.1);
+  padding: 0.5rem 1rem;
+  background: var(--main-color);
+  border-radius: 2rem;
 }
 
-.navbar .menu li a:hover {
-  color: var(--main-color);
+.navbar .menu li:hover a {
   font-weight: 600;
+  color: var(--bg-50);
 }
 
 .navbar .icons {
@@ -50,7 +52,9 @@
   padding: 0.5rem;
   cursor: pointer;
   font-weight: 700;
+  color: var(--text-900);
 }
+
 
 .navbar .icons svg:hover {
   background: var(--main-color);
@@ -73,8 +77,6 @@
   padding: 0.2rem 1rem;
   border: 0.2rem solid var(--main-color);
   border-radius: 1rem;
-
-
 }
 
 #search ~ input {

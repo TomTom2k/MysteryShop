@@ -1,0 +1,81 @@
+.footer {
+  width: 100%;
+  background: linear-gradient( to top, var(--text-900) 40% ,var(--main-color));
+  padding: 4rem;
+  position: relative;
+  margin-top: 20rem;
+}
+
+.footer .wave {
+  margin: -30rem -4rem 4rem;
+}
+
+.footer * {
+  color: var(--bg-50);
+}
+
+.footer .f-icons {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  text-align: center;
+  padding-bottom: 4rem;
+  border-bottom: 0.1rem solid #999;
+}
+
+.footer .f-icons svg {
+  width: 3.5rem;
+  height: 3.5rem;
+  padding: 0.5rem;
+  background: linear-gradient(var(--main-color), var(--second-color));
+  border-radius: 50%;
+}
+
+.footer .f-icons .f-text {
+  font-size: 1.2rem;
+}
+
+.f-menu {
+  padding: 4rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.f-menu ul li {
+  font-size: 1.8rem;
+  padding: 0.7rem 2rem;
+}
+
+.f-menu ul li:hover {
+  border-bottom: 0.1rem solid #777;
+}
+
+.f-menu ul li a {
+  color: #ccc;
+}
+
+.f-menu .li-icons svg {
+  width: 3rem;
+  height: 3rem;
+  margin: 0.5rem;
+  margin-right: 6rem;
+  cursor: pointer;
+}
+
+
+
+@media (max-width: 992px) {
+
+}
+@media (max-width: 768px) {
+  .footer .f-icons {
+    flex-direction: column;
+  }
+  .footer .f-icons * {
+    margin: 1rem 0;
+  }
+}
+@media (max-width: 600px) {
+  
+}

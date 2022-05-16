@@ -7,6 +7,7 @@
   font-family: 'Poppins', sans-serif;
   text-decoration: none;
   list-style: none;
+  transition: all 0.2s ease;
 }
 
 :root {
@@ -16,8 +17,12 @@
   --text-900: #000;
   --text-700: #576574;
 
-  --bg-100: #f8f6f2;
+  --bg-100: #f2f6f8;
   --bg-50: #fff;
+}
+
+body {
+  margin-top: 9rem;
 }
 
 html {

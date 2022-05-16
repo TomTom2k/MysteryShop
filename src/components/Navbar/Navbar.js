@@ -32,7 +32,8 @@ const Navbar = () => {
         </li>
       </ul>
       <div className="icons">
-        <UilShoppingBag/>
+        <Link to="/cart"><UilShoppingBag/></Link>
+        
         <UilSearch id="search" onClick={() => setIsShow(!isShow)}/>
         {isShow ? <input type="type" />: "" }
         <UilBars id="bars" onClick={() => setIsShow(!isShow)} />

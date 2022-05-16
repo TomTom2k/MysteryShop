@@ -1,0 +1,31 @@
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3.5rem;
+  color: var(--main-color);
+  font-weight: 500;
+  position: relative;
+}
+
+.title::after {
+  width: 15rem;
+  height: 0.2em;
+  content: '';
+  position: absolute;
+  top: 5rem;
+  left: calc(50% - 8rem);
+  background: linear-gradient(15deg, var(--second-color), var(--main-color));
+  border-radius: 0.5rem;
+}
+
+.title::before {
+  width: 2rem;
+  height: 2rem;
+  position: absolute;
+  top: 1.5rem;
+  left: calc(50% - 20rem);
+  content: '';
+  clip-path: polygon(50% 0%, 70% 27%, 98% 35%, 79% 64%, 79% 91%, 49% 81%, 21% 91%, 21% 61%, 2% 35%, 32% 30%);
+  background: linear-gradient(var(--second-color), var(--main-color));
+}
