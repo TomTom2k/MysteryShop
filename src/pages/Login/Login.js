@@ -1,23 +1,29 @@
-import React, { useState } from 'react'
-import { useEffect } from 'react'
+import React from 'react';
+import { useEffect, useState, createContext } from 'react';
+import Sigin from '../../components/LoginComponents/Sigin/Sigin';
+import Register from '../../components/LoginComponents/Register/Register';
+
+import './Login.css';
+import Paragraph from '../../components/LoginComponents/Paragraph/Paragraph';
+
+export const LoginContext = createContext();
 
 const Login = () => {
-  const [users, setUsers] = useState([])
+	const [isLogin, setIsLogin] = useState(true);
+	let value = {
+		isLogin,
+		setIsLogin,
+	};
 
-  useEffect(() => {
-    fetch('http://localhost:3000/user')
-      .then((res) => res.json())
-      .then(json => setUsers(json))
-  }, [])
-  
+	return (
+		<LoginContext.Provider value={value}>
+			<div className="l-wrapper">
+				<Sigin />
+				<Register />
+				<Paragraph />
+			</div>
+		</LoginContext.Provider>
+	);
+};
 
-
-
-  return (
-    <div>
-      
-    </div>
-  )
-}
-
-export default Login
+export default Login;

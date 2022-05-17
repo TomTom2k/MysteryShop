@@ -1,0 +1,110 @@
+.l-wrapper {
+  width: 100%;
+  min-height: 50rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.form {
+  width: 30rem;
+  height: 40rem;
+  padding: 3rem 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 0 0.8rem rgba(0, 0, 0, 0.4);
+  border-radius: 2rem;
+  top: 0;
+  left: 0;
+  background: var(--bg-50);
+  transform: scale(0);
+}
+
+form {
+  width: 100%;
+}
+
+.form.active {
+  z-index: 100;
+  transform: scale(1);
+}
+
+.f-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--main-color);
+  text-align: center;
+}
+
+.input-item {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 1rem 0 2rem;
+  position: relative;
+}
+
+.input-item input {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  border: 0.1rem solid var(--text-900);
+  outline: none;
+  margin: 0.5rem;
+}
+
+.input-item input:focus {
+  border: 0.1rem solid var(--main-color);
+}
+
+.input-item label {
+  font-size: 1.3rem;
+  color: var(--text-900);
+  font-weight: 600;
+
+}
+
+.input-item.error input{
+  border: 0.1rem solid red;
+  box-shadow: 0 0 0.8rem #ff000079;
+}
+
+.input-item .message {
+  color: red;
+  position: absolute;
+  bottom: -1.5rem;
+  left: 1rem;
+}
+
+.btn-submit {
+  width: 12rem;
+  margin-left: 5rem;
+  margin-top: 0.5rem;
+}
+
+.btn-submit > * {
+  color: var(--text-900);
+}
+
+.l-icons {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.l-icons svg {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  padding: 0.3rem;
+  border: 0.1rem solid var(--main-color);
+  margin: 0 1rem;
+  color: var(--main-color);
+}
+
+.l-icons svg:hover {
+  color: var(--bg-50);
+  background: var(--main-color);
+}
