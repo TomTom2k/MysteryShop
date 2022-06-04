@@ -28,3 +28,15 @@ export const isExistsPassword = (value, email) => {
 	);
 	return index !== -1 ? undefined : `Mật khẩu không đúng`;
 };
+
+export const postData = (data) => {
+	fetch('http://localhost:3000/user', {
+		method: 'POST',
+		body: JSON.stringify(data),
+		headers: {
+			'Content-Type': 'application/json',
+		},
+	})
+		.then((res) => res.json())
+		.then((data) => console.log(data));
+};

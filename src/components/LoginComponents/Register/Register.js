@@ -1,4 +1,3 @@
-import { Field } from 'rc-field-form';
 import React, { useContext, useState } from 'react';
 import { LoginContext } from '../../../pages/Login/Login';
 
@@ -6,8 +5,8 @@ import {
 	isEmail,
 	isRequired,
 	isExistsEmail,
-	isExistsPassword,
 	isConfimred,
+	postData,
 } from '../../../pages/Login/Logic';
 
 const Register = () => {
@@ -50,6 +49,21 @@ const Register = () => {
 			}
 		}
 		return '';
+	};
+
+	const handleRegister = (e) => {
+		setErrEmail(checkEmail(email, 'Email'));
+		setErrPassword(checkPassword(password, 'mật khẩu'));
+		setErrEntryPassword(checkEntryPassword(entryPassword, 'đúng mật khẩu'));
+		let user = {
+			email: email,
+			password: password,
+		};
+
+		if (errEmail || errPassword || errEntryPassword) e.preventDefault();
+		else {
+			postData(user);
+		}
 	};
 
 	return (
@@ -104,7 +118,12 @@ const Register = () => {
 					<div className="message">{errEntryPassword}</div>
 				</div>
 
-				<button className="btn-submit">Đăng ký</button>
+				<button
+					className="btn-submit"
+					onClick={(e) => handleRegister(e)}
+				>
+					Đăng ký
+				</button>
 			</form>
 		</div>
 	);
