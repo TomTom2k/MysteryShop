@@ -1,0 +1,61 @@
+.contact {
+    display: flex;
+}
+
+.contact .c-left-side {
+    width: 50%;
+    padding: 2rem 10rem;
+}
+
+.contact .c-left-side img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.contact .c-right-side {
+    width: 50%;
+    padding: 2rem 10rem;
+}
+
+.contact .c-right-side form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contact .c-right-side form label {
+    margin-top: 3rem;
+    font-size: 1.6rem;
+    color: var(--text-900);
+    font-weight: 500;
+}
+
+.contact .c-right-side form input,
+.contact .c-right-side form textarea {
+    width: 100%;
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    border: 0.1rem solid var(--text-900);
+    outline: none;
+    box-shadow: 0.5rem 0.5rem 2rem -0.5rem var(--main-color);
+}
+
+.contact .c-right-side form textarea {
+    height: 8rem;
+}
+
+.contact .c-right-side form input:focus,
+.contact .c-right-side form textarea:focus {
+    border: 0.2rem solid var(--main-color);
+}
+
+.contact .c-right-side form button {
+    width:  15rem;
+    margin: 2rem auto;
+}
+
+.contact .c-right-side form span {
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 500;
+}

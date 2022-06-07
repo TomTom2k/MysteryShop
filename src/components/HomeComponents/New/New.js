@@ -10,7 +10,7 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
 import NewPs from '../../../data/hots.json';
-import Product from '../Product/Product';
+import Product from '../../Product/Product';
 import Title from '../../Title/Title';
 
 const New = () => {
@@ -49,6 +49,7 @@ const New = () => {
 					{newPs.map((newP) => (
 						<SwiperSlide key={newP.id}>
 							<Product
+								id={newP.id}
 								title={newP.title}
 								image1={newP.image1}
 								image2={newP.image2}
